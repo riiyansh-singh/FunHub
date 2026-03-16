@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FunHub</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>FunHub 🎮🧮</h1>
+<nav>
+<a href="#games">Games</a> |
+<a href="#calculators">Calculators</a> |
+<a href="#fun">Fun</a>
+</nav>
+</header>
+
+<section id="games">
+<h2>Mini Games</h2>
+<div id="tic-tac-toe">
+<h3>Tic-Tac-Toe</h3>
+<div class="board">
+<div class="cell" data-cell="0"></div>
+<div class="cell" data-cell="1"></div>
+<div class="cell" data-cell="2"></div>
+<div class="cell" data-cell="3"></div>
+<div class="cell" data-cell="4"></div>
+<div class="cell" data-cell="5"></div>
+<div class="cell" data-cell="6"></div>
+<div class="cell" data-cell="7"></div>
+<div class="cell" data-cell="8"></div>
+</div>
+<button id="reset">Reset Game</button>
+</div>
+</section>
+
+<section id="calculators">
+<h2>Calculators</h2>
+<div id="simple-calculator">
+<input type="number" id="num1" placeholder="Number 1">
+<input type="number" id="num2" placeholder="Number 2">
+<select id="operation">
+<option value="add">+</option>
+<option value="subtract">-</option>
+<option value="multiply">*</option>
+<option value="divide">/</option>
+</select>
+<button id="calc-btn">Calculate</button>
+<p id="calc-result">Result: </p>
+</div>
+</section>
+
+<section id="fun">
+<h2>Fun Section</h2>
+<button id="joke-btn">Show Random Joke</button>
+<p id="joke-display"></p>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+                           </html>

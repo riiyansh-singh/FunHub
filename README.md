@@ -24,4 +24,4 @@ Built with **HTML, CSS, and JavaScript**, it’s interactive, beginner-friendly,
 - Add responsive design for mobile/tablet  
 
 ## Live Demo
-Once GitHub Pages is enabled, you can share the live FunHub website online.
+https://riiyansh-singh.github.io/FunHub/

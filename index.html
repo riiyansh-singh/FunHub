@@ -3,68 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FunHub</title>
+  <title>FunHub ✦ Play. Laugh. Explore.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <header>
-    <h1>FunHub</h1>
+    <div class="logo">FunHub</div>
+    <p class="tagline">Play · Laugh · Explore · Discover</p>
     <nav>
       <a href="#tic-tac-toe">Tic-Tac-Toe</a>
       <a href="#calculator">Calculator</a>
-      <a href="#fun-section">Fun Section</a>
+      <a href="#jokes">Jokes</a>
+      <a href="#memory">Memory <span class="new-badge">NEW</span></a>
+      <a href="#trivia">Trivia <span class="new-badge">NEW</span></a>
+      <a href="#quotes">Quotes <span class="new-badge">NEW</span></a>
+      <a href="#palette">Colors <span class="new-badge">NEW</span></a>
     </nav>
   </header>
 
   <main>
-    <!-- Tic-Tac-Toe -->
-    <section id="tic-tac-toe">
-      <h2>Tic-Tac-Toe</h2>
-      <div class="board">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+
+    <!-- TIC-TAC-TOE -->
+    <section class="card" id="tic-tac-toe">
+      <h2><span class="icon">⭕</span> Tic-Tac-Toe</h2>
+      <div class="ttt-meta">
+        <div class="score-board">
+          <div class="score-item score-x">
+            <div class="score-label">X Wins</div>
+            <div class="score-val" id="score-x">0</div>
+          </div>
+          <div class="score-item score-d">
+            <div class="score-label">Draws</div>
+            <div class="score-val" id="score-d">0</div>
+          </div>
+          <div class="score-item score-o">
+            <div class="score-label">O Wins</div>
+            <div class="score-val" id="score-o">0</div>
+          </div>
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--muted);cursor:pointer;">
+          <input type="checkbox" id="ai-mode"> VS Computer (AI)
+        </label>
       </div>
-      <p id="winner"></p>
+      <div class="status-bar" id="ttt-status">Player X's turn</div>
+      <div class="board" id="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <div class="ttt-controls">
+        <button class="btn btn-cyan" id="ttt-reset">↺ Reset Board</button>
+        <button class="btn btn-mag"  id="ttt-clear-scores">Clear Scores</button>
+      </div>
     </section>
 
-    <!-- Calculator -->
-    <section id="calculator">
-      <h2>Calculator</h2>
-      <input type="text" id="calc-display" readonly>
-      <div id="calc-buttons">
-        <button data-value="1">1</button>
-        <button data-value="2">2</button>
-        <button data-value="3">3</button>
-        <button data-value="+">+</button>
-        <button data-value="4">4</button>
-        <button data-value="5">5</button>
-        <button data-value="6">6</button>
-        <button data-value="-">-</button>
-        <button data-value="7">7</button>
-        <button data-value="8">8</button>
-        <button data-value="9">9</button>
-        <button data-value="*">*</button>
-        <button data-value="0">0</button>
-        <button data-value="C">C</button>
-        <button data-value="=">=</button>
-        <button data-value="/">/</button>
+    <!-- CALCULATOR -->
+    <section class="card" id="calculator">
+      <h2><span class="icon">🖩</span> Calculator</h2>
+      <div class="calc-wrap">
+        <input type="text" id="calc-display" readonly placeholder="0">
+        <div id="calc-buttons">
+          <button class="calc-btn clear" data-value="C">C</button>
+          <button class="calc-btn op"    data-value="**">x²</button>
+          <button class="calc-btn op"    data-value="%">%</button>
+          <button class="calc-btn op"    data-value="/">÷</button>
+          <button class="calc-btn" data-value="7">7</button>
+          <button class="calc-btn" data-value="8">8</button>
+          <button class="calc-btn" data-value="9">9</button>
+          <button class="calc-btn op" data-value="*">×</button>
+          <button class="calc-btn" data-value="4">4</button>
+          <button class="calc-btn" data-value="5">5</button>
+          <button class="calc-btn" data-value="6">6</button>
+          <button class="calc-btn op" data-value="-">−</button>
+          <button class="calc-btn" data-value="1">1</button>
+          <button class="calc-btn" data-value="2">2</button>
+          <button class="calc-btn" data-value="3">3</button>
+          <button class="calc-btn op" data-value="+">+</button>
+          <button class="calc-btn"  data-value="+/-">+/−</button>
+          <button class="calc-btn"  data-value="0">0</button>
+          <button class="calc-btn"  data-value=".">.</button>
+          <button class="calc-btn eq" data-value="=">=</button>
+        </div>
       </div>
     </section>
 
-    <!-- Fun Section -->
-    <section id="fun-section">
-      <h2>Fun Section</h2>
-      <p id="joke-display">Click the button for a programming joke!</p>
-      <button id="joke-btn">Show Joke</button>
+    <!-- JOKES -->
+    <section class="card" id="jokes">
+      <h2><span class="icon">😂</span> Programming Jokes</h2>
+      <div id="joke-display">Click the button for a programming joke! 🤖</div>
+      <button class="btn btn-mag" id="joke-btn">⚡ Get a Joke</button>
     </section>
+
+    <!-- MEMORY GAME -->
+    <section class="card" id="memory">
+      <h2><span class="icon">🧠</span> Memory Match <span class="new-badge">NEW</span></h2>
+      <div class="memory-meta">
+        <div class="memory-stats">
+          <div class="memory-stat">Moves: <span id="move-count">0</span></div>
+          <div class="memory-stat">Matches: <span id="match-count">0</span>/8</div>
+          <div class="memory-stat">Time: <span id="mem-timer">0s</span></div>
+        </div>
+        <button class="btn btn-cyan" id="mem-reset">↺ New Game</button>
+      </div>
+      <div class="status-bar" id="mem-status">Flip cards to find matching pairs!</div>
+      <div class="memory-grid" id="memory-grid"></div>
+    </section>
+
+    <!-- TRIVIA QUIZ -->
+    <section class="card" id="trivia">
+      <h2><span class="icon">🎯</span> Trivia Quiz <span class="new-badge">NEW</span></h2>
+      <div class="quiz-score-bar">
+        <div class="q-stat">Score: <span id="quiz-score">0</span></div>
+        <div class="q-stat">Correct: <span id="quiz-correct">0</span></div>
+        <div class="q-stat">Wrong: <span id="quiz-wrong">0</span></div>
+        <div class="q-stat">Q: <span id="quiz-num">0</span>/10</div>
+      </div>
+      <div class="status-bar" id="quiz-status">Press "Load Question" to start!</div>
+      <div class="quiz-question" id="quiz-question">Your trivia question will appear here...</div>
+      <div class="quiz-options"  id="quiz-options"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn btn-yellow" id="quiz-load">⚡ Load Question</button>
+        <button class="btn btn-cyan"   id="quiz-reset">↺ Reset Score</button>
+      </div>
+    </section>
+
+    <!-- QUOTE GENERATOR -->
+    <section class="card" id="quotes">
+      <h2><span class="icon">💬</span> Inspiration Engine <span class="new-badge">NEW</span></h2>
+      <div id="quote-display">
+        <em>Every expert was once a beginner.</em>
+        <span id="quote-author">— Unknown</span>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn btn-cyan" id="quote-btn">✦ New Quote</button>
+        <button class="btn btn-mag"  id="quote-copy">⎘ Copy</button>
+      </div>
+    </section>
+
+    <!-- COLOR PALETTE -->
+    <section class="card" id="palette">
+      <h2><span class="icon">🎨</span> Palette Generator <span class="new-badge">NEW</span></h2>
+      <div class="palette-row" id="palette-row"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn btn-cyan" id="palette-btn">⟳ Generate Palette</button>
+        <button class="btn btn-mag"  id="palette-copy-all">⎘ Copy All Hex</button>
+      </div>
+      <p style="margin-top:12px;font-size:0.8rem;color:var(--muted);">Click any color swatch to copy its hex code.</p>
+    </section>
+
   </main>
+
+  <footer>
+    <span>FunHub</span> · Built with 💙 · v2.0 — Memory · Trivia · Quotes · Palettes
+  </footer>
+
+  <div class="copy-toast" id="copy-toast">Copied!</div>
 
   <script src="js/main.js"></script>
 </body>
